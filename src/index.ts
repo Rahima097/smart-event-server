@@ -79,6 +79,10 @@ async function start() {
       res.json({ success: true });
     });
 
+    app.get('/', (req, res) => {
+      res.send('Smart Event Scheduler API is running ✅');
+    });
+
     app.listen(port, () => {
       console.log(`Server running on port ${port}`);
     });
